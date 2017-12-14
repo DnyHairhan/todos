@@ -10,7 +10,7 @@ ul {
   list-style-type:none;
 }
 .container {
-  position: absolute;
+  position: fixed;
   top:0;
   left: 0;
   bottom: 0;
@@ -20,6 +20,8 @@ ul {
   justify-content: center;
 }
 .app {
+  display: flex;
+  flex-direction: column;
   flex:1 1 auto;
   position: relative;
   max-width: 500px;
@@ -46,6 +48,10 @@ header input{
 }
 .allComplete {
   padding: 10px 0;
+}
+.list-wrap {
+  flex: 1;
+  overflow: auto;
 }
 ul {
 }
