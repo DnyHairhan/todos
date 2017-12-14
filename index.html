@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>todos</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="app">
+      <h1>Todos</h1>
+      <header>
+        <input class="text" type="text" name="" value="">
+        <div class="allComplete">
+          <input class="all" type="checkbox" name="" value="" />
+          <span>Mark all as complete</span>
+        </div>
+      </header>
+      <ul class="list"></ul>
+      <footer></footer>
+    </div>
+    <!-- <div class="list-details"></div> -->
+  </div>
+  <script type="text/template" id="item-temp">
+      <a class="link" href="#">
+        <input class="check" type="checkbox" name="" value="" <%= checked = state ? 'checked' : ''%> />
+        <span class="content"><%= content%></span>
+        <div class="icon">
+          <i class="iconfont icon-close"></i>
+        </div>
+      </a>
+  </script>
+  <script type="text/template" id="footer-temp">
+    <div class="undone-item">
+      <span><%= undoneItem %> items left</span>
+    </div>
+    <div class="completed-item">
+      <input class="completedBtn" type="button" name="" value="Clear <%= completedItem %> completed-item">
+    </div>
+  </script>
+  <script type="text/template" id="listDetailsItem">
+    <div class="content">
+      <h2><%= content%></h2>
+      <input type="text" class="hide">
+    </div>
+  </script>
+  <script type="text/javascript" src="src/jquery3.1.0.min.js"></script>
+  <script type="text/javascript" src="src/underscore.js"></script>
+  <script type="text/javascript" src="src/backbone.js"></script>
+  <script type="text/javascript" src="src/app.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/font/iconfont.css">
+</body>
+</html>
